@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mirmir"
+version = "0.1.0"
+description = "An application for converting articles and studies into audio."
+
+# Right now, all the packages only work with versions of Python 3.12.
+requires-python = ">=3.12,<3.13"
+
+authors = [
+    { name = "AJ Yule" }
+]
+
+readme = "README.md"
+license = "MIT"
+
+dependencies = [
+    "trafilatura",
+    "kokoro",
+    "numpy",
+    "scrapy",
+    "setuptools",
+    "easyid3"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "coverage",
+    "ruff"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 79
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
