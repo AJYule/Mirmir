@@ -14,7 +14,7 @@ wisdom and knowledge.
 - Windows 10 or later.
 
 ## Installation 
-To download Mirmir, first download Mirmir from Github:
+To use Mirmir, first download it from Github:
 ```powershell
 git clone https://github.com/AJYule/Mirmir.git
 ```
